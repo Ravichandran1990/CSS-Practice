@@ -1,0 +1,46 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fold hover effect html</title>
+    <style>
+        .fold {
+            position: relative;
+            display: inline-block;
+            border-radius: 6px;
+            clip-path: polygon(20px 0px, 100% 0px,100% 100%, 0% 100%,0% 20px);
+            background-color: blue;
+            padding: 16px 40px;
+            margin: 0 8px;
+            font-weight: 600;
+            color: #fff;
+            transition: clip-path 500ms;
+
+        }
+        .fold::after{
+            content: "";
+            width: 20px;
+            top: 0px;
+            left: 0px;
+            height: 20px;
+            background-color: blueviolet;
+            position: absolute;
+            box-shadow: 2px 2px 2px rgb(58, 53, 53);
+            transition: transform 500ms;
+            border-radius: 0 0 6px 0;
+        }
+        .fold:hover{
+            clip-path: polygon(0px 0px, 100% 0px,100% 100%,0% 100%,0% 0px);
+        }
+        .fold:hover:after {
+            transform: translate(-100%, -100%);
+        }
+    </style>
+ </head>
+ <body>
+        <div class="fold">Hello World</div>
+        <div class="fold">Hello Ravi</div>
+ </body>
+ </html>
