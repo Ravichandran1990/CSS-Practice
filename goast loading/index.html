@@ -1,0 +1,56 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-item {
+            padding: 10px;
+            background-color: #fff;
+            width: 700px;
+        }
+        .animated-background {
+            animation-duration: 4s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-name: placeholder;
+            animation-timing-function: linear;
+            background-color: rgb(193, 23, 23);
+            background: linear-gradient(to right, #eeeeee 8%, #bbbbbb 18%, #eeeeee 33%);
+            background-size: 800px 104px;
+            height: 70px;
+            position: relative;
+        }
+        .divider {
+            position: absolute;
+            left: 40%;
+            width: 50px;
+            height: 100%;
+            background-color: #fff;
+        }
+        @keyframes placeholder {
+            0% {
+                background-position: -800px 0;
+            }
+            100% {
+                background-position: 800px 0;
+            }
+        }
+    </style>
+ </head>
+ <body>
+    <div class="main-item">
+        <div class="animated-background">
+            <div class="divider"></div>
+        </div>
+        <br>
+        <div class="animated-background"><div class="divider"></div></div>
+        <br>
+        <div class="animated-background"><div class="divider"></div></div>
+        <br>
+        <div class="animated-background"><div class="divider"></div></div>
+    </div>
+ </body>
+ </html>
